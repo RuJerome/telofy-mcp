@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "app.telofy/telofy",
+  "title": "Telofy",
+  "description": "AI phone receptionist for small businesses: read calls, leads and booked appointments.",
+  "version": "1.0.0",
+  "websiteUrl": "https://telofy.de",
+  "repository": {
+    "url": "https://github.com/RuJerome/telofy-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.telofy.app/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token: your Telofy API key (tlfy_…), created in the Telofy portal under Integrations.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
